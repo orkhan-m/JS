@@ -256,11 +256,13 @@
 // }
 
 // Expressions `${ 'here we put expressions' }`
-3 + 4 
-1991
-true && false && !false
+// 3 + 4 
+// 1991
+// true && false && !false
 
-// statement (deosn't produce a value)
-if (23 > 10){
-    const str = "23 is bigger"
-}
+// // statement (deosn't produce a value)
+// if (23 > 10){
+//     const str = "23 is bigger"
+// }
+
+console.log("Git practice")
