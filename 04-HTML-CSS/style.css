@@ -1,11 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #c9afaf;
   font-family: Arial;
   font-size: 20;
+  padding: 50px;
 }
 
 h1 {
   font-size: 50px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 .first {
@@ -15,4 +28,32 @@ h1 {
 #your-name {
   color: blue;
   border: 5px solid #444;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+  /* color: yellow; */
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen; /* wchange the whole box, but since it is inline element only text get highlighted*/
+}
+
+/* relate to child element if e.g. there is 2 p2 boxes */
+#your-name {
+  color: olivedrab; /* change only Your Name p2 element*/
+}
+
+#course-image {
+  width: 400px;
 }
