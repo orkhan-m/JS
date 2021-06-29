@@ -52,31 +52,64 @@
 // console.log(total)
 
 //CHALLANGE 3
-let mark = {
-    name: 'Mark',
-    mass: 78,
-    height: 1.69,
+// let mark = {
+//     name: 'Mark',
+//     mass: 78,
+//     height: 1.69,
     
-    calcBMI: function(){
-        this.bmiVal = Number(this.mass) / Number(this.height) ** 2
-        return this.bmiVal
+//     calcBMI: function(){
+//         this.bmiVal = Number(this.mass) / Number(this.height) ** 2
+//         return this.bmiVal
+//     }
+// }
+
+// let john = {
+//     name: 'John',
+//     mass: 92,
+//     height: 1.95,
+    
+//     calcBMI: function(){
+//         this.bmiVal = Number(this.mass) / Number(this.height) ** 2
+//         return this.bmiVal
+//     }
+// }
+
+// console.log(mark.calcBMI())
+// console.log(john.calcBMI())
+
+// console.log(mark.bmiVal > john.bmiVal ? `Mark's (${mark.bmiVal.toFixed(2)}) BMI is higher than John's (${john.bmiVal.toFixed(2)})` : `John's (${john.bmiVal}) BMI is higher than Mark's (${mark.bmiVal})`)
+
+//CODING CHALLENGE 4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const totals = []
+
+function calcTip(bill){
+    let tip;
+    if (bill >= 50 && bill<=300) {
+        tip = 0.15 
+    } else {
+        tip = 0.2
     }
+    const tipValue = tip*bill
+    return tipValue
 }
 
-let john = {
-    name: 'John',
-    mass: 92,
-    height: 1.95,
-    
-    calcBMI: function(){
-        this.bmiVal = Number(this.mass) / Number(this.height) ** 2
-        return this.bmiVal
-    }
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]))
+    totals.push(calcTip(bills[i]) + bills[i])
 }
 
-console.log(mark.calcBMI())
-console.log(john.calcBMI())
+console.log(tips)
+console.log(totals)
 
-console.log(mark.bmiVal > john.bmiVal ? `Mark's (${mark.bmiVal.toFixed(2)}) BMI is higher than John's (${john.bmiVal.toFixed(2)})` : `John's (${john.bmiVal}) BMI is higher than Mark's (${mark.bmiVal})`)
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        sum += arr[i]
+    }
+    return sum / arr.length
+}
 
-
+console.log(calcAverage(tips))
+console.log(calcAverage(totals))

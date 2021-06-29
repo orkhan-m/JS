@@ -113,4 +113,37 @@
 
 // console.log(myCountry.describe())
 
+// for(let i = 1; i <= 50; i++)
+//     console.log(`Voter number ${i} is currently voting`)
 
+
+// const populations = [10, 15, 30, 65]
+// let percentages2 = [];
+
+// function percentageOfWorld1(population){
+//     return (population / 7900) * 100 
+// }
+
+// for (let i = 0; i < populations.length; i++){
+//     percentages2.push(percentageOfWorld1(populations[i]).toFixed(2))
+// }
+
+// console.log(percentages2)
+
+// // const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
+// // 'Russia']];
+
+// // for (let list = 0; list < listOfNeighbours.length; list++) {
+// //     for (let elem = 0; elem < listOfNeighbours[list].length; elem++){
+// //         console.log(`Neighbour: ${listOfNeighbours[list][elem]}`)
+// //     }
+// // }
+// let percentages3 = [];
+
+// let i = 0
+// while (i < populations.length) {
+//     percentages3.push(percentageOfWorld1(populations[i]).toFixed(2));
+//     i++
+// }
+
+// console.log(percentages3)

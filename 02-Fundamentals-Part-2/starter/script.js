@@ -245,46 +245,135 @@
 // console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`)
 
 // OBJECT METHOD
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Smith',
-    birthYear: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriverLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Smith',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriverLicense: true,
 
-    // declaration won't work here: const calcAge = function(...
-    // calcAge: function(birthYear){
-    //     return 2037 - birthYear;
-    // }
+//     // declaration won't work here: const calcAge = function(...
+//     // calcAge: function(birthYear){
+//     //     return 2037 - birthYear;
+//     // }
 
-//THIS is refering to the OBJECT jonas
-    // calcAge: function(){
-    //     console.log(this)
-    //     return 2037 - this.birthYear
-    // }
+// //THIS is refering to the OBJECT jonas
+//     // calcAge: function(){
+//     //     console.log(this)
+//     //     return 2037 - this.birthYear
+//     // }
 
-    calcAge: function () {
-        this.age = 2037 - this.birthYear
-        return this.age;
-    },
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear
+//         return this.age;
+//     },
 
-    getSummary: function(){
-        return `${this.firstName} is a ${this.calcAge()} years old teacher, and he ${this.hasDriverLicense ? "has driving license" : "doesn't have driving license"}`
-    }
-}
+//     getSummary: function(){
+//         return `${this.firstName} is a ${this.calcAge()} years old teacher, and he ${this.hasDriverLicense ? "has driving license" : "doesn't have driving license"}`
+//     }
+// }
 
-console.log(jonas.calcAge())
-// console.log(jonas['calcAge'](1991))
+// console.log(jonas.calcAge())
+// // console.log(jonas['calcAge'](1991))
 
-// CHALLANGE
-// "Jonas is a 46 year old teacher, and he has a drivers license"
-// console.log(`${jonas.firstName} is a ${jonas.age} years old teacher, and he ${jonas.hasDriverLicense ? "has driving license" : "doesn't have driving license"}`)
-console.log(jonas.getSummary())
-console.log(jonas.age)
+// // CHALLANGE
+// // "Jonas is a 46 year old teacher, and he has a drivers license"
+// // console.log(`${jonas.firstName} is a ${jonas.age} years old teacher, and he ${jonas.hasDriverLicense ? "has driving license" : "doesn't have driving license"}`)
+// console.log(jonas.getSummary())
+// console.log(jonas.age)
+
+// FOR LOOP keeps running while condition is TRUE
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`)
+// }
+
+// const jonas = [
+//     'Jonas',
+//     'Smith',
+//     2037-1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+//     true
+// ]
+
+// const types = [];
+// const types1 = [];
+
+// // jonas[5] does not exist
+
+// for(let i = 0; i < jonas.length; i++){
+//     console.log(jonas[i], typeof jonas[i]);
+
+//     types[i] = typeof jonas[i]
+//     types1.push(typeof jonas[i])
+// }
+
+// console.log(types);
+// console.log(types1);
+// // to change value in array;
+// // types[0] = 'string';
+
+// const years = [1991, 2007, 1960, 2020]
+// const age = []
+
+// for (let i = 0; i < years.length; i++){
+//     age.push(2037 - years[i])
+// }
+
+// console.log(age)
+
+// // CONTINUE & BREAK
+// // CONTINUE - to exit current iteration loop
+// //BREAK - completely stop the loop
+
+// // PRINT ONLY STRINGS BY MISSING NON-STRINGS
+// console.log('--- ONLY STRINGS ---')
+// for(let i = 0; i < jonas.length; i++){
+//     if(typeof jonas[i] !== 'string') continue;
+//     console.log(jonas[i], typeof jonas[i]);
+// }
+
+// AS SOON AS NUMBER IS FOUND BREAK THE LOOP
+// console.log('--- BREAK WITH NUMBER ---')
+// for(let i = 0; i < jonas.length; i++){
+//     if(typeof jonas[i] === 'number') break;
+//     console.log(jonas[i], typeof jonas[i]);
+// }
 
 
+// const jonas = [
+//     'Jonas',
+//     'Smith',
+//     2037-1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ]
 
+// for (let i = jonas.length-1; i >= 0 ; i--){
+//     console.log(jonas[i])
+// }
 
+// for (let exercise = 1; exercise < 4; exercise++) {
+//     console.log(`--------------- Starting exercise ${exercise}`);
 
+//     for (let rep = 1; rep < 6; rep++){
+//         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`)
+//     }
+// }
 
+// let rep = 1;
+// while (rep <= 10){
+//     console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
+//     rep++
+// }
+
+// // number between 0 and 1
+// let dice = Math.trunc(Math.random() * 6)
+// console.log(dice)
+
+// while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`)
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log(`Loop is about to end ...`)
+// }
