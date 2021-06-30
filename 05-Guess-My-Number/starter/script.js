@@ -21,10 +21,9 @@
 
 // TOPIC 73. Handling CLick Events
 // addEventListener - listen for events (name of event click)
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 
-document.querySelector('.number').textContent = secretNumber;
 // 'click'; 'dblclick'; 'mousedown'                  !
 document.querySelector('.check').addEventListener('click', function () {
   // guess is the value retrieved from gurss class
@@ -42,6 +41,8 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
 
     document.querySelector('.number').style.width = '30rem';
+
+    document.querySelector('.number').textContent = secretNumber;
 
     // when the number is higher
   } else if (guess > secretNumber) {
@@ -74,6 +75,17 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.guess').value = '';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.number').textContent = '?';
 });
 
 // git commit -m '75. Manipulating CSS styles'
