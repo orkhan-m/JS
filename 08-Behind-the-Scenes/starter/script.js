@@ -60,32 +60,32 @@
 // TOPIC 95. Hoisting and TDZ in Practice
 
 // NOTE will be equal to undefined because of VAR
-console.log(me);
+// console.log(me);
 
 // let and const will give error because of the
 // TEMPORAL DEAD ZONE - TDZ
 // console.log(job);
 // console.log(year);
 
-var me = 'Jonas';
-let job = 'teacher';
-const year = 1991;
+// var me = 'Jonas';
+// let job = 'teacher';
+// const year = 1991;
 
-// FUnction declaration
-// NOTE will give result because of FN declaration
-console.log(addDecl(2, 3));
+// // FUnction declaration
+// // NOTE will give result because of FN declaration
+// console.log(addDecl(2, 3));
 
-// both function arrow & expression are in TDZ
-// console.log(addExpr(2, 3));
-// console.log(addArrow(2, 3));
+// // both function arrow & expression are in TDZ
+// // console.log(addExpr(2, 3));
+// // console.log(addArrow(2, 3));
 
-function addDecl(a, b) {
-  return a + b;
-}
+// function addDecl(a, b) {
+//   return a + b;
+// }
 
-const addExpr = function (a, b) {
-  return a + b;
-};
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
 
 // NOTE Error: Uncaught ReferenceError:
 // Cannot access 'addArrow' before initialization
@@ -99,24 +99,24 @@ const addExpr = function (a, b) {
 // but since we used var it is undefined = False
 // and will be deleted because of var
 
-console.log(numProducts);
+// console.log(numProducts);
 
-// undefined will trigger execution of function below
-if (!numProducts) deleteShoppingCart();
+// // undefined will trigger execution of function below
+// if (!numProducts) deleteShoppingCart();
 
-var numProducts = 10;
+// var numProducts = 10;
 
-function deleteShoppingCart() {
-  console.log('All products deleted');
-}
+// function deleteShoppingCart() {
+//   console.log('All products deleted');
+// }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
 
-// NOTE window in console
-// x will be visible in window object but let and const won't be declared
+// // NOTE window in console
+// // x will be visible in window object but let and const won't be declared
 
-console.log(x === window.x);
-console.log(y === window.y);
-console.log(z === window.z);
+// console.log(x === window.x);
+// console.log(y === window.y);
+// console.log(z === window.z);
